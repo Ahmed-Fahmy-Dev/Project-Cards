@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step Project Cards</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="module" src="./scripts/index.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-dark bg-primary bg-gradient">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="./assets/icons/header-icon.png" width="75px" height="75px"
+              alt="Health Care"></a>
+          <h1 class="text-dark fst-italic">Health Care Service</h1>
+          <div>
+            <button type="button" class="btn btn-outline-dark btn-lg navbar__signin-bttn">Sign In</button>
+            <button type="button" class="btn btn-outline-dark btn-lg navbar__add-bttn d-none">Add Visit</button>
+            <button type="button" class="btn btn-danger btn-lg navbar__signout-bttn d-none">Sign Out</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container-lg filter mb-5 mt-3 d-none">
+        <form class="row g-3 align-items-end m-auto" id="filterForm">
+          <div class="col-sm-7 form-floating">
+            <label class="text-primary fw-bold" id="searchInputLabel" for="searchInput">Search</label>
+            <input type="search" class="form-control" id="searchInput" placeholder="Enter text" />
+          </div>
+          <div class="col-sm">
+            <label class="text-primary fw-bold">Status</label>
+            <select id="selectStatus" class="form-select">
+              <option selected>All</option>
+              <option value="Opened">Opened</option>
+              <option value="Closed">Closed</option>
+            </select>
+          </div>
+          <div class="col-sm">
+            <label class="text-primary fw-bold">Urgency</label>
+            <select id="selectUrgency" class="form-select">
+              <option selected>All</option>
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select>
+          </div>
+          <button type="button" class="filter__reset-btn col-sm btn btn-primary btn-md">Reset</button>
+        </form>
+      </div>
+
+      <div class="row cards-container m-auto container-lg">
+      </div>
+
+      <p class="mb-0 signin-text fs-3 fst-italic d-flex align-items-center justify-content-center container-lg">
+        Please&nbsp<a class="signin-link" type="button" href="#">Sign in</a>&nbspto display your cards.
+      </p>
+
+      <p
+        class="mb-0  nocards-text fs-3 fst-italic d-none d-flex align-items-center justify-content-center container-lg">
+        No visit cards have been added</p>
+
+    </main>
+  </body>
+</html>
