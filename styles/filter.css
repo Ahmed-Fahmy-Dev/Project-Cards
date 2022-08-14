@@ -1,0 +1,15 @@
+#searchInputLabel{
+    position: static;
+    padding: 0;
+    overflow: visible;
+}
+
+#searchInput {
+    height: 38px;
+    padding: 0.625rem;
+}
+
+#searchInput:focus {
+    padding: 0.625rem;
+}
+

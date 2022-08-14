@@ -1,0 +1,28 @@
+.container {
+    margin-top: 100px;
+}
+
+.card__btn-moreText {
+    margin-top: 10px;
+}
+.card__btnDel {
+    float: right;
+}
+.hidden {
+    display: none;
+}
+.card__btnEdit {
+   margin-top: 12px;
+}
+.card__noItems {
+    text-align: center;
+}
+.card-body-p {
+    padding-right: 0px;
+}
+.card-header__wrapper {
+    padding-right: 4px;
+}
+.badge__opnCls {
+    margin-top: 9px;
+}

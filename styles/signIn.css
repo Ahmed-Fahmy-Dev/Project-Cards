@@ -1,0 +1,16 @@
+.signin-text,
+.nocards-text {
+  height: calc(100vh - 101px);
+}
+
+.parent-modal {
+  display: block;
+}
+
+.modal__bg {
+  z-index: 1;
+}
+
+.modal__dialog {
+  z-index: 2;
+}
